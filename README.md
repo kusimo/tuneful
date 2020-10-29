@@ -1,6 +1,6 @@
 # TuneFul
 
-This is a JavaScript project developed with ReactJs. This is a clone version of [Tunein VueJs](https://github.com/Datlyfe/tuneIn) by [Datlyfe](https://github.com/Datlyfe/tuneIn/commits?author=Datlyfe).
+This is a JavaScript project developed with ReactJs. Clone version of [Tunein VueJs](https://github.com/Datlyfe/tuneIn) by [Datlyfe](https://github.com/Datlyfe/tuneIn/commits?author=Datlyfe).
 
 Simple and elegant music discovery app
 
