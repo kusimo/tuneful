@@ -14,7 +14,9 @@ const Cue = ({ audio }) => {
         return <div>Loading</div>
     }
 
-    track.setAttribute('src', audio.preview);
+    track.setAttribute('src', audio.preview
+    .replace(/^http:\/\/cdn/i, 'https://cdns')
+    .replace(/deezer.com/i, 'dzcdn.net'));
 
     track.addEventListener('loadeddata', () => {
         if (track.readyState >= 2) {
@@ -106,12 +108,19 @@ const Cue = ({ audio }) => {
         buttonController('play');
     }
 
+    const getImageUrl = url => {
+        return (
+          'https://e-cdns-images.dzcdn.net/images/' +
+          url.substring(url.indexOf('/cover') + 1)
+        )
+      }
+
 
         return (
             <div className="cue">
                 <div className="cue-wrap fadeIn">
         <h3 className="label">Now Playing</h3>
-                    <img ref={imageRef} className="cover" src={audio.album.cover_medium} alt="artist" />
+                    <img ref={imageRef} className="cover" src={getImageUrl(audio.album.cover_medium)} alt="artist" />
                     <span className="title">{audio.title}</span>
                     <span className="artist">{audio.artist.name}</span>
                     <div className="player">
