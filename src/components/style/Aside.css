@@ -182,6 +182,7 @@ aside.menu .icon-cogs {
 
 @media only screen and (max-width: 800px) {
     aside.menu  {
+        border-radius: 0;
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
         -ms-flex-direction: row;

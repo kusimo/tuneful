@@ -11,7 +11,7 @@ const Cue = ({ audio }) => {
     const [videoCanPlay, setVideoCanPlay] = useState(false);
 
     if (!audio) {
-        return <div>Loading</div>
+        return <div></div>
     }
 
     track.setAttribute('src', audio.preview
