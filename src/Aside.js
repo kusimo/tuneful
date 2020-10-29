@@ -39,7 +39,7 @@ class Aside extends React.Component {
                 </Nav>
 
                 <div className="watermark">
-                    <Watermark title="Github" link="https://git.io" icon="git" />
+                    <Watermark title="Github" link="https://github.com/kusimo/tuneful" icon="git" />
                 </div>
 
             </aside>
