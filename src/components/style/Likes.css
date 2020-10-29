@@ -1,0 +1,64 @@
+#liked .loved{
+    margin-top:20px;
+    list-style:none;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-wrap:wrap;
+    flex-wrap:wrap
+}
+#liked .info{
+    font-size:16px;
+    margin:0 20px;
+    overflow:hidden
+}
+#liked .info .artist, #liked .info .title{
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    overflow:hidden;
+    display:block
+}
+#liked .info .artist{
+    color:silver
+}
+#liked .item{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-align:center;
+    -ms-flex-align:center;
+    align-items:center;
+    margin:15px 10px;
+    width:calc(50% - 20px)
+}
+@media screen and (max-width:500px) {
+    #liked .item {
+        width:100%;
+    }
+}
+#liked .cover{
+    -ms-flex-negative:0;
+    flex-shrink:0;
+    height:80px;
+    width:80px;
+    border-radius:3px;
+    background-size:cover;
+    background-position:50%;
+    background-repeat:no-repeat;
+    -webkit-transition:all .3s;
+    transition:all .3s;
+    border:3px solid #dfdfdf
+}
+#liked .cover:hover{
+    cursor:pointer;
+    -webkit-transform:translateY(-3px);
+    transform:translateY(-3px)
+}
+#liked .remove{
+    color:#db1d40;
+    display:block;
+    font-weight:700;
+    text-transform:uppercase;
+    cursor:pointer;
+    font-size:14px
+}

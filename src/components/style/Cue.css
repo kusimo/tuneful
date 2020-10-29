@@ -1,0 +1,135 @@
+.cue .cue-wrap {
+    -webkit-animation-duration: 0.7s;
+    animation-duration: 0.7s;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 17px;
+  }
+  .cue  .cover {
+    width: 200px;
+    height: 200px;
+    padding: 3px;
+    border-radius: 50%;
+    background: #d8d6d6;
+  }
+  .cue .artist,
+  .cue .title {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .cue .title {
+    margin-top: 15px;
+    color: #fff;
+    display: block;
+    max-width: 250px;
+  }
+  .cue .artist {
+    color: #d8d6d6;
+  }
+  .cue .label {
+    font-size: 15px;
+    margin-bottom: 15px;
+    color: #e4e4e4;
+  }
+  .cue .player {
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    margin: 25px auto;
+  }
+  .cue .player .controlls,
+  .cue .player {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .cue .player .controlls {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 70px;
+  }
+  .cue .icon {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    fill: currentColor;
+  }
+  .cue .loader-wrap {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-width: 2px;
+    border-color: currentcolor currentcolor transparent transparent;
+    border-style: solid;
+    border-radius: 9999px;
+    -webkit-animation: loader 0.45s linear 0s infinite normal none running;
+    animation: loader 0.45s linear 0s infinite normal none running;
+  }
+  .cue .loader-wrap .loader {
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    width: 1px;
+    white-space: nowrap;
+    position: absolute;
+    border-width: 0;
+    border-style: initial;
+    border-color: initial;
+    -o-border-image: initial;
+    border-image: initial;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+  }
+  @media only screen and (max-width: 800px) {
+    .cue .label {
+        display: none;
+    }
+    .cue .cue-wrap {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        margin: 0;
+    }
+    .cue .cover {
+        width: 80px;
+        height: 80px;
+        padding: 0;
+        border-radius: 0;
+        -webkit-transform: rotate(0deg) !important;
+        transform: rotate(0deg) !important;
+        -webkit-animation: unset !important;
+        animation: unset !important;
+    }
+    .cue .title {
+        margin-top: 0;
+        margin: 0 20px;
+    }
+    .cue .artist,
+    .cue .title {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .cue .player {
+        width: auto;
+        margin: 0;
+        margin-left: auto;
+        margin-right: 20px;
+    }
+  }

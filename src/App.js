@@ -1,24 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import './Aside';
+import Aside from './Aside';
+import Main from './Main';
+import Cue from './Cue';
 
-function App() {
+
+const App = () => {
+
+  const [currentAudio, setCurrentAudio] = useState(null);
+
+  const updateCurrentAudio = (audio) => {
+    setCurrentAudio(audio);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container">
+        <div className="red"></div>
+        <div className="black"></div>
+        <Aside />
+        <Main updateCurrentAudio={updateCurrentAudio}  />
+        <Cue audio={currentAudio} title="Now Playing" />
+      </div>
+
+
     </div>
   );
 }
