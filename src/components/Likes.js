@@ -13,6 +13,13 @@ const Likes = ({ onAudioSelect }) => {
         setLikes(JSON.parse(localStorage.getItem('musicLikes')) || [])
     }
 
+    const getImageUrl = url => {
+        return (
+          'https://e-cdns-images.dzcdn.net/images/' +
+          url.substring(url.indexOf('/cover') + 1)
+        )
+      }
+
     const items = likes.map((item) => {
 
         return (
@@ -20,7 +27,7 @@ const Likes = ({ onAudioSelect }) => {
                 <div className="cover-placeholder"
                     onClick={() => { onAudioSelect(item); }}>
                     <div className="cover"
-                        style={{ backgroundImage: `url(${item.album.cover_small})` }}>
+                        style={{ backgroundImage: `url(${getImageUrl(item.album.cover_small)})` }}>
                     </div>
                 </div>
                 <div className="info">
