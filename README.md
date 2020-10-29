@@ -31,7 +31,7 @@ Your app is ready to be deployed!
 
 ## Preview 📸
 
-### https://tunein.netlify.com/
+### https://tuneful.netlify.app/
 
 <img src="public/app.png" >
 
