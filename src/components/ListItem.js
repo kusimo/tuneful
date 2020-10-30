@@ -1,41 +1,44 @@
 import React from 'react';
 
-const ListItem = ({icon, part, onCategorySelect, text, catId, activeList }) => {
+const ListItem = ({ icon, part, onCategorySelect, text, catId, activeList, onClick, selected }) => {
 
     const withIcon = () => {
-        if(undefined !== icon) {
+        if (undefined !== icon) {
             return (
-                <i className={`icon icon-${icon}`} /> 
-            ) 
+                <i className={`icon icon-${icon}`} />
+            )
         }
     }
 
-    const withClickHandler = () => {
-        if(undefined !== onCategorySelect) {
+    const displayListItem = () => {
+        if (undefined !== onCategorySelect) {
             return (
-                <span 
-                    onClick={() => onCategorySelect(catId)} 
-                    className={`${part}__list__link`}>
-                            {text}
+                <li className={`${part}__list__item ${activeList === catId  ? 'active' : ''}`}>
+                    {withIcon()}
+                    <span
+                        onClick={() => onCategorySelect(catId)}
+                        className={`${part}__list__link`}>
+                        {text}
                     </span>
+                </li>
             )
         } else {
             return (
-                <span 
-                className={`${part}__list__link`}>
-                        {text}  
-                </span>
+                <li onClick={() => onClick(text)} className={`${part}__list__item ${selected === text ? 'active' : ''}`}>
+                    {withIcon()}
+                    <span
+                        className={`${part}__list__link`}>
+                        {text}
+                    </span>
+                </li>
             )
         }
     }
 
-   
-    const active = activeList === catId? 'active' : '';
+
     return (
-        <li className={`${part}__list__item ${active}`}>
-                {withIcon()}
-                {withClickHandler()}
-        </li>
+
+        displayListItem()
     )
 }
 

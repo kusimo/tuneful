@@ -54,6 +54,9 @@ aside.menu .nav__list__item .icon {
     background-repeat: no-repeat; 
     background-position: center;
 }
+aside.menu .nav__list__item.active .icon {
+    filter: opacity(0.5);
+}
 aside.menu .nav__list__item .star {
     color: orange;
 }
