@@ -1,8 +1,10 @@
 # TuneFul
 
-This is a JavaScript project developed with ReactJs. Clone version of [Tunein VueJs](https://github.com/Datlyfe/tuneIn) by [Datlyfe](https://github.com/Datlyfe/tuneIn/commits?author=Datlyfe).
+This is a JavaScript project developed with ReactJs. The React version of [Tunein VueJs] by [Datlyfe](https://github.com/Datlyfe/tuneIn/commits?author=Datlyfe).
 
-Simple and elegant music discovery app
+I challenged myself to turn the app into a React app from Vue framework.
+
+Tuneful is a simple and elegant music discovery app
 
 ⭐ the repo if you like it.
 
